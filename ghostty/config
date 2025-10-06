@@ -1,0 +1,33 @@
+confirm-close-surface = false
+clipboard-read = allow
+clipboard-write = allow
+window-save-state = never
+window-theme = dark
+background-opacity = 0.9
+theme = Adwaita Dark
+background = #000000
+foreground = #ffffff
+selection-background = #ffffff
+selection-foreground = #000000
+cursor-color = #ffffff
+cursor-text = #000000
+palette = 0=#0B0000
+palette = 1=#ffffff
+palette = 2=#2E3557
+palette = 3=#39397C
+palette = 4=#895688
+palette = 5=#9A7555
+palette = 6=#8F929E
+palette = 7=#D7D9E1
+palette = 8=#96989D
+palette = 9=#5A3237
+palette = 10=#3D4774
+palette = 11=#4C4CA6
+palette = 12=#B773B6
+palette = 13=#CE9C72
+palette = 14=#BFC3D3
+palette = 15=#D7D9E1
+font-size = 10
+font-family = Hack Nerd Font
+font-family-bold = Hack Nerd Font
+gtk-titlebar = false
