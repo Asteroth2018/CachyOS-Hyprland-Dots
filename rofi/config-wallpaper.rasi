@@ -1,0 +1,230 @@
+/* Main Config wallpaper */
+
+/* ---- Configuration ---- */
+configuration {
+    modi:                       "drun,run";
+    font:                       "JetBrainsMono Nerd Font 1";
+    show-icons:                 true;
+    display-drun:               " ";
+	display-run:                "";
+    display-filebrowser:        "";
+    display-window:             "";
+	drun-display-format:        "{name}";
+    hover-select:               true;
+    me-select-entry:            "MouseSecondary";
+    me-accept-entry:            "MousePrimary";
+    window-format:              "{w} · {c} · {t}";
+	dpi:						1;
+    
+}
+
+/* ---- Load pywal colors (custom wal template) ---- */
+@theme "~/.config/rofi/wallust/colors-rofi.rasi"
+
+/* ---- Window ---- */
+window {
+    width:						1300px;
+	height:						767px;
+    x-offset:                   0px;
+    y-offset:                   0px;
+    spacing:                    0px;
+    padding:                    1px;
+    margin:                     0px; 
+    border:                     3px;
+    border-color:               @alternate-active-background;
+    cursor:                     "default";
+    location:                   center;
+    anchor:                     center;
+    fullscreen:                 false;
+    enabled:                    true;
+    border-radius:              28px;
+    border-radius:              28px;
+ 	 background-color:            rgba(0, 0, 0, 0.7);
+}
+
+/* ---- Mainbox ---- */
+mainbox {
+    enabled:                    true;
+    orientation:                horizontal;
+	padding:					8px;
+//    background-image:           url("~/.config/rofi/.current_wallpaper", width);
+    children:                   [ "imagebox"];
+    border-radius:              28px;
+    background-color:           rgba(0, 0, 0, 0.0);
+     
+}
+
+/* ---- Imagebox ---- */
+imagebox {
+    background-color:           transparent;
+    orientation:                vertical;
+    children:                   ["listbox"];
+    border-radius:              28px;
+}
+
+/* ---- Listbox ---- */
+listbox {
+    spacing:                    4px;
+    orientation:                vertical;
+    children:                   [ "listview" ];
+    border-radius:              20px;
+    border:                     0px;
+    border-color:               @active-background;
+	 background-color:            rgba(0, 0, 0, 0.0);
+}
+
+/* ---- Dummy ---- */
+dummy {
+    background-color:           transparent;
+}
+
+/* ---- Inputbar ---- */
+inputbar {
+    enabled:                    true;
+    text-color:                 @foreground;
+    spacing:                    10px;
+    padding:                    12px;
+    border-radius:              20px;
+    border-color:               @foreground;
+	background-color:		    @background;
+    children:                   [ "textbox-prompt-colon", "entry" ];
+    border:                     2px;
+    background-color:            rgba(0, 0, 0, 0.0);
+}
+
+textbox-prompt-colon {
+    enabled:                    true;
+    expand:                     false;
+    str:                        "󰸉 ";
+    text-color:                 inherit;
+	background-color:			transparent;
+}
+
+entry {
+    enabled:                    true;
+    text-color:                 inherit;
+    cursor:                     text;
+    placeholder:                "Choose Wallpaper";
+    placeholder-color:          inherit;
+	background-color:			transparent;
+}
+
+/* ---- Listview ---- */
+listview {
+	enabled:					 true;
+	columns:					 5;
+	lines:						 3;
+	spacing:                     2px;
+	dynamic:                     true;
+	cycle:                       true;
+	scrollbar:                   false;
+	layout:                      vertical;
+	reverse:                     false;
+	fixed-height:                true;
+	fixed-columns:               false;
+	background-color:            transparent;
+	border-radius:             	 20px;
+        padding: 5px 5px 5px 12px;
+        border:						0px;
+        background-color:            rgba(0, 0, 0, 0.0);
+}
+
+/* ---- Element ---- */
+element {
+    enabled:                    true;
+    padding:                    0px;
+    margin:                     4px 4px 4px 8px;
+    cursor:                     pointer;
+    background-color:         transparent;
+    border-radius:              20px;
+    border:                     0px;
+    border-color:               @foreground;
+}
+
+element normal.normal {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element normal.urgent {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element normal.active {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element selected.normal {
+    border:                      3px;
+    border-color:                #ffffff;
+    background-color:            @alternate-active-background;
+    text-color:                  #ffffff;
+}
+
+element selected.urgent {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element selected.active {
+    background-color:           inherit;
+    border:                     3px;
+    text-color:                 @foreground;
+}
+
+element alternate.normal {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element alternate.urgent {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element alternate.active {
+    background-color:           inherit;
+    text-color:                 @foreground;
+}
+
+element-icon {
+    background-color:           transparent;
+    text-color:                 inherit;
+    size:                       235px;
+    cursor:                     inherit;
+}
+
+element-text {
+    background-color:           transparent;
+    text-color:                 transparent;
+    cursor:                     inherit;
+    vertical-align:             0.5;
+    horizontal-align:           0;
+}
+
+element-text selected.normal {
+    background-color:           @alternate-active-background;
+    text-color:                 transparent;
+}
+
+/*****----- Message -----*****/
+message {
+    background-color:           @background;
+    margin:						20px 0px 0px 0px;
+    border-radius: 				10px;
+}
+
+textbox {
+    padding:                    15px;
+    background-color:      @background;
+    text-color:                 @foreground;
+}
+
+error-message {
+    padding:                    15px;
+    border-radius:            20px;
+    background-color:      @background;
+    text-color:                 @foreground;
+}

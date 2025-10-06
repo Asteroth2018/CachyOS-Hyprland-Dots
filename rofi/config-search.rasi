@@ -1,0 +1,31 @@
+/* Rofi Config for Google Search) */
+
+@import "~/.config/rofi/config-compact.rasi" 
+
+/* ---- Window ---- */
+window {
+	width: 50%;
+    y-offset: 26px;
+    location: north;
+}
+
+/* ---- Inputbar ---- */
+inputbar {
+    enabled: true;
+    text-color: @foreground;
+}
+
+/* ---- Mainbox ---- */
+mainbox {
+	padding: 0px;
+    children: [ "entry"];
+}
+
+/* ---- Entry ---- */ 
+entry {
+	placeholder: "                                                  Google Search";
+	placeholder-color:            rgba(255, 255, 255, 0.5);
+	text-color: #ffffff;
+	padding: 5px 5px 5px 28px;
+}
+

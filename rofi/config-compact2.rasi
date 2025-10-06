@@ -1,0 +1,241 @@
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun,run,window";
+	font:                       "JetBrainsMono Nerd Font 10";
+    show-icons:                 true;
+    display-drun:               "󰌽";
+	display-run:                "";
+    display-filebrowser:        "";
+    display-window:             "";
+	drun-display-format:        "{name}";
+    hover-select:               true;
+    me-select-entry:            "MouseSecondary";
+    me-accept-entry:            "MousePrimary";
+    window-format:              "{w} · {c} · {t}";
+	dpi:						1;
+    
+}
+
+/*****----- Global Properties -----*****/
+// @import                          "shared/colors.rasi"
+// @import                          "shared/fonts.rasi"
+@theme "~/.config/rofi/wallust/colors-rofi.rasi"
+
+* {
+    /* For Screens with 1920x1080 resolution */
+/*    screen-margin:               70px 150px;
+    box-spacing:                 40px;
+    icon-size:                   96px;
+    element-padding:             30px;
+    element-spacing:             15px;*/
+
+    /* For Screens with 1366x768 resolution */
+    
+    screen-margin:               450px 250px;
+    box-spacing:                 40px;
+    icon-size:                   86px;
+    element-padding:             30px;
+    element-spacing:             20px;
+    
+    /* Use this as reference and create for your screen resolution */
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       1920px;
+    height:                      1080px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            rgba(0, 0, 0, 0.0);
+    cursor:                      "default";
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    width:                       1000px;
+    height:                      380px;
+//    spacing:                     @box-spacing;
+    margin:                      @screen-margin;
+    padding:                     23px 10px 0px 10px;
+    border:                      3px solid;
+    border-radius:               28px;
+    border-color:                @active-background;
+    background-color:            rgba(0, 0, 0, 0.6);
+    children:                    [ "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                    true;
+    text-color:                 @foreground;
+    spacing:                    10px;
+    border-radius:              100px;
+    border-color:               @foreground;
+	background-color:		    @background;
+    children:                   [ "mode-switcher", "textbox-prompt-colon", "entry" ];
+    border:                     3px;
+    padding:			2px 2px 2px 2px;
+    margin:                     2% 20%;
+    border-color:               @active-background;
+    background-color:            rgba(0, 0, 0, 0.0);
+}
+
+textbox-prompt-colon {
+    enabled:                    true;
+	padding:					4px 0px 0px 0px;
+    expand:                     false;
+    str:                        "   ";
+    font:                       "Fira Code SemiBold 20";
+    text-color:                 inherit;
+	background-color:			transparent;
+}
+
+entry {
+    enabled:                    true;
+	padding:					10px 0px 10px 0px;
+    text-color:                 inherit;
+    cursor:                     text;
+    placeholder:                "Szukaj";
+    placeholder-color:          inherit;
+	background-color:			transparent;
+}
+
+/* ---- Mode Switcher ---- */
+mode-switcher{
+    enabled:                    true;
+    spacing:                    10px;
+    background-color:          	transparent;
+    text-color:                 @foreground;
+}
+
+button {
+    padding:                   2px 2px 2px 2px;
+    border-radius:             28px;
+    background-color:          @background;
+    text-color:                @normal-foreground;
+    cursor:                    pointer;
+    border:                    2px;
+    border-color:              @border-color;
+}
+
+button selected {
+    background-color:          @selected-normal-background;
+    text-color:                @selected-normal-foreground;
+    border:                    1px;
+    border-color:              @background;
+	
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     12;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                false;
+    fixed-columns:               false;
+    fixed-width:                 false;
+    
+//    spacing:                     @element-spacing;
+//    margin:                      0px 100px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               28px;
+    border-color:                @foreground;
+    background-color:            rgba(0, 0, 0, 0.0);
+    text-color:                  @foreground;
+    cursor:                      "default";
+    border:						0px;
+}
+scrollbar {
+    handle-width:                5px ;
+    handle-color:                @selected;
+    border-radius:               0px;
+    background-color:            @background-alt;
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     5px;
+    margin:                      0px;
+    padding:                     20px;
+    border:                      0px solid;
+    border-radius:               28px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  #ffffff;
+    orientation:                 vertical;
+    cursor:                      pointer;
+}
+
+element normal.normal {
+    background-color:            inherit;
+    text-color:                  #ffffff;
+}
+
+element normal.active {
+    background-color:           inherit;
+    text-color:                 #ffffff;
+}
+
+element alternate.normal {
+    background-color:           inherit;
+    text-color:                 #ffffff;
+}
+
+element selected.normal {
+    border:                      3px;
+    border-color:                #ffffff;
+    background-color:            @alternate-active-background;
+    text-color:                  #ffffff;
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        61px;
+    cursor:                      inherit;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+/*****----- Message -----*****/
+error-message {
+    padding:                     150px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            @background;
+    text-color:                  @foreground;
+}
+textbox {
+    background-color:            @background;
+    text-color:                  @foreground;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
+}
