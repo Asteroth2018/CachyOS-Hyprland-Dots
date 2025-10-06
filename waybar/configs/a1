@@ -1,0 +1,57 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+
+// ### DEFAULT ### //
+{
+"include": "~/.config/waybar/modules",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"height": 35,
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 4,
+"margin-left": 8,
+"margin-right": 8,
+
+"modules-left": [
+	"hyprland/workspaces#pacman",
+	"custom/separator#line", 
+	"memory",
+	"custom/separator#line",
+        "disk",
+        "custom/separator#line",
+	"custom/playerctl",
+	"custom/separator#line",
+	],
+
+"modules-center": [
+	"custom/separator#line",
+	"clock", 
+	"custom/separator#line",
+	"custom/weather",
+	"custom/separator#line",
+	"custom/kitty",
+        "custom/separator#line",
+        "custom/menu",	
+	"custom/separator#line",
+	], 
+
+"modules-right": [
+	//"hyprland/window", 
+	"custom/separator#line",
+	"tray",
+	"custom/separator#line",
+	"bluetooth",
+	"custom/separator#line",
+	"battery",
+	"custom/separator#line", 
+	"backlight",
+	"custom/separator#line",
+	"pulseaudio",
+	"custom/separator#line",
+	"custom/power",
+	],
+}

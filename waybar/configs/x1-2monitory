@@ -1,0 +1,111 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+
+// ### TOP and LEFT PANEL ## //
+
+[{
+"include": "~/.config/waybar/modules",
+"layer": "top",
+//"mode": "dock",
+//"width": 1200,
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"output": "eDP-1",
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 4,
+"margin-left": 8,
+"margin-right": 8,
+    
+
+"modules-left": [
+	"custom/menu",
+	"custom/separator#line",	
+	"custom/kitty",
+        "custom/separator#line",
+        "custom/lock",
+	"custom/separator#line", 
+	"group/mobo_drawer",
+        "custom/separator#line",
+        "wlr/taskbar",
+	],
+
+"modules-center": [
+	"clock", 
+	"custom/separator#line",
+	"custom/weather",
+	"custom/separator#line",
+        "hyprland/workspaces#pacman",	
+	], 
+
+"modules-right": [
+	"custom/playerctl",
+	"custom/separator#line",
+	"tray",
+	"custom/separator#line",
+	"bluetooth",
+	"custom/separator#line",
+	"pulseaudio",
+	"pulseaudio#microphone",
+	"custom/separator#line",
+	"keyboard-state",
+	"custom/separator#line",
+	"custom/swaync",
+	"custom/separator#line",
+	"custom/power",
+	],
+},
+
+{
+"include": "~/.config/waybar/modules",
+"layer": "top",
+"position": "top",
+"output":"HDMI-A-1",
+"height": 10,
+"margin-top": 4,
+"margin-bottom": 1,
+"margin-left": 4,
+"margin-right": 4,
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+//"gtk-layer-shell": true,
+   
+"modules-left": [
+	"custom/menu",
+	"custom/separator#line",	
+	"custom/kitty",
+        "custom/separator#line",
+        "custom/lock",
+	"custom/separator#line", 
+	"group/mobo_drawer",
+        "custom/separator#line",
+        "wlr/taskbar",
+	],
+
+"modules-center": [
+	"clock", 
+	"custom/separator#line",
+	"custom/weather",
+	"custom/separator#line",
+        "hyprland/workspaces#pacman",	
+	], 
+
+"modules-right": [
+	"custom/playerctl",
+	"custom/separator#line",
+	"tray",
+	"custom/separator#line",
+	"bluetooth",
+	"custom/separator#line",
+	"pulseaudio",
+	"pulseaudio#microphone",
+	"custom/separator#line",
+	"keyboard-state",
+	"custom/separator#line",
+	"custom/swaync",
+	"custom/separator#line",
+	"custom/power",
+	],
+}]

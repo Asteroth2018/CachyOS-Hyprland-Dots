@@ -1,0 +1,50 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+
+// ### DEFAULT ### //
+{
+"include": "~/.config/waybar/modules",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "bottom",
+"height": 40,
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 0,
+"margin-left": 0,
+"margin-right": 0,
+"margin-bottom": 0,
+
+"modules-left": [
+	"custom/playerctl",
+        "custom/separator#line",
+	"wlr/taskbar",
+	],
+
+"modules-center": [
+        "custom/menu",
+        "custom/separator#line",
+	"custom/power", 
+        "custom/separator#line",
+        "hyprland/workspaces#x1",	
+	], 
+
+"modules-right": [
+	//"hyprland/window", 
+	"tray",
+	"custom/separator#line", 
+	"group/mobo_drawer",
+	"custom/separator#line",
+	"group/laptop_drawer",
+	"custom/separator#line",
+        "group/audio_drawer",
+	"custom/separator#line",
+	"custom/swaync",
+	"custom/separator#line",
+	"custom/weather2",
+	"custom/separator#line", 
+	"clock",
+	],
+}

@@ -1,0 +1,385 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Catppuccin Mocha */
+
+* {
+font-family: "JetBrainsMono Nerd Font";
+font-weight: bold;
+min-height: 0;
+/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+font-size: 103%;
+font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+padding: 1px;
+}
+
+@import "/home/asteroth/.cache/wal/colors-waybar.css";
+/*@import "../waybar/style/catppuccin-themes/mocha.css";*/
+
+window#waybar {
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  background: transparent;
+  /*border: 2px solid @overlay0;*/
+  /*background: @theme_base_color;*/
+  border-radius: 10px;
+  border-color: #ffffff;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#waybar.empty #window {
+  background: none;
+}
+
+tooltip label {
+/*    background: @color3; */
+    border-radius: 26px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: @color15;
+    background: @theme_base_color;
+    color: @color15;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size: 100%;
+/*    padding: 5px;  */
+}
+
+tooltip {
+/*    background: @color3; */
+    border-radius: 26px;
+    border-width: 0px;
+    border-style: solid;
+    border-color: @color15;
+    background: @theme_base_color;
+    color: @color15;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-size: 95%;
+/*    padding: 5px;  */
+}
+
+/* This section can be use if you want to separate waybar modules */
+.modules-center {
+	background: @theme_base_color; 
+ 	border: 2px solid @color15;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 1px;
+	padding-left: 6px;
+	border-radius: 26px;
+
+} 
+
+.modules-left {
+	background: @theme_base_color;
+  	border: 2px solid @color15;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 9px;
+	padding-left: 6px;
+	border-radius: 26px;
+} 
+
+.modules-right {
+	background: @theme_base_color;
+  	border: 2px solid @color15;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 3px;
+	padding-left: 8px;
+	border-radius: 26px;
+} 
+
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#cava,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state label,
+#keyboard-state label.locked,
+#keyboard-state,
+#memory,
+#mode,
+#mpd,
+#network,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar button,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-cycle_wall,
+#custom-keybinds,
+#custom-light_dark,
+#custom-lock,
+#custom-menu,
+#custom-power_vertical,
+#custom-power,
+#custom-speaker,
+#custom-updater,
+#custom-weather,
+#custom-weather.clearNight,
+#custom-weather.cloudyFoggyDay,
+#custom-weather.cloudyFoggyNight,
+#custom-weather.default, 
+#custom-weather.rainyDay,
+#custom-weather.rainyNight,
+#custom-weather.severe,
+#custom-weather.showyIcyDay,
+#custom-weather.snowyIcyNight,
+#custom-weather.sunnyDay {
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+
+#tray {
+color: @color3;
+}
+
+#custom-kitty {
+color: @color10;
+}
+
+#bluetooth {
+  color: @color5;
+}
+
+#idle_inhibitor {
+  color: @color3;
+}
+
+#backlight {
+  color: @color2;
+}
+
+#battery {
+  color: @color4;
+}
+
+@keyframes blink {
+  to {
+    color: @color6;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: @color5;
+  color: @theme_text_color;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  box-shadow: inset 0 -3px transparent;
+}
+
+#clock {
+  color: @color8;
+}
+
+#cpu {
+  color: @color7;
+}
+
+#memory {
+  color: @color10;
+}
+
+#disk {
+  color: @color15;
+}
+
+#temperature {
+  color: @color11;
+}
+
+#temperature.critical {
+  background-color: @red;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+#keyboard-state {
+  color: @color12;
+}
+
+#workspaces button {
+    box-shadow: none;
+	text-shadow: none;
+    padding: 0px;
+    border-radius: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+	border-radius: 8px;
+	color: @red;
+	background-color: transparent;
+ 	padding-left: 4px;
+    padding-right: 4px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button.persistent {
+  	color: @color15;
+  	border-radius: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+}
+
+#workspaces button.active {
+  	color: @color12;
+  	border-radius: 8px;
+    padding-left: 5px;
+    padding-right: 7px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button.urgent {
+  color: @color5;
+  border-radius: 0px;
+}
+
+#taskbar button.active {
+    padding-left: 8px;
+    padding-right: 8px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#taskbar button:hover {
+    padding-left: 2px;
+    padding-right: 2px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#custom-menu {
+  color: @color13;
+  padding-right: 15px;
+}
+
+#custom-power {
+  color: @color14;
+}
+
+#custom-updater {
+  color: @red;
+}
+
+#custom-light_dark {
+  color: @blue;
+}
+
+#custom-weather {
+  color: @color7;
+}
+
+#custom-lock {
+  color: @color15;
+}
+
+#pulseaudio {
+  color: @color3;
+}
+
+#pulseaudio.bluetooth {
+  color: @color8;
+}
+#pulseaudio.muted {
+  color: @red;
+}
+
+#custom-separator {
+  color: @color15;
+}
+
+#window {
+  color: @color9;
+}
+
+#hyprland-window {
+  color: @color9;
+}
+
+#custom-waybar-mpris {
+  color:@lavender;
+}
+
+#custom-playerctl {
+  color: @color9;
+}
+
+#network {
+  color: @teal;
+}
+#network.disconnected,
+#network.disabled {
+  background-color: @surface0;
+  color: @text;
+}
+#pulseaudio-slider slider {
+	min-width: 0px;
+	min-height: 0px;
+	opacity: 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+	min-width: 80px;
+	min-height: 5px;
+	border-radius: 5px;
+}
+
+#pulseaudio-slider highlight {
+	min-height: 10px;
+	border-radius: 5px;
+}
+
+#backlight-slider slider {
+	min-width: 0px;
+	min-height: 0px;
+	opacity: 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
+}
+
+#backlight-slider trough {
+	min-width: 80px;
+	min-height: 10px;
+	border-radius: 5px;
+}
+
+#backlight-slider highlight {
+	min-width: 10px;
+	border-radius: 5px;
+}

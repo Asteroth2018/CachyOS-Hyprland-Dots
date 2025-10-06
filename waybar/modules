@@ -1,0 +1,1002 @@
+//* ---- 💫 https://github.com/JaKooLit 💫 ---- *//
+
+{
+  // HYPRLAND WORKSPACES. CHOOSE as desired and place on waybar configs
+  // CIRCLES Style
+  "hyprland/workspaces": {
+    "active-only": false,
+    "all-outputs": true, 
+    "format": "{icon}",
+    "show-special": false,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+    },
+    "format-icons": {
+      "active": "",
+      "default": "",
+    },  
+  },
+  // ROMAN Numerals style
+  "hyprland/workspaces#roman": {
+    "active-only":false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "show-special": false,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "persistent_workspaces":{
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+    },
+    "format-icons": {
+      "1": "I",
+      "2": "II",
+      "3": "III",
+      "4": "IV",
+      "5": "V",
+      "6": "VI",
+      "7": "VII",
+      "8": "VIII",
+      "9": "IX",
+      "10": "X",
+      
+    },
+  },
+  // X1 Style
+  "hyprland/workspaces#x1": {
+    "active-only":false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "show-special": false,
+    "persistent-workspaces":{
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+    },
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "persistent":"",
+      "urgent":"󱈸",
+      "empty":"",
+    },
+  },
+  
+  "hyprland/workspaces#kanji": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      },
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十",
+    }
+  },
+  
+  //  NUMBERS and ICONS style
+  "hyprland/workspaces#4": {
+    "format": "{name}",
+    "format": " {name} {icon} ",
+    //"format": " {icon} ",
+    "show-special": false,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "all-outputs": true,
+    "sort-by-number": true,
+    "format-icons": {
+      "1": " ",
+      "2": " ",
+      "3": " ",
+      "4": " ",
+      "5": " ",
+      "6": " ",
+      "7": "",
+      "8": " ",
+      "9": "",
+      "10": "10",
+      "focused": "",
+      "default": "",
+    },
+  },
+  
+  // GROUP
+  
+  "group/motherboard": {
+    "orientation": "horizontal",
+    "modules": [
+      "cpu",
+      "memory",
+      "temperature",
+      "disk",
+      ]	
+  },
+
+"group/mobo_drawer": {
+	"orientation": "inherit",
+	"drawer": {
+		"transition-duration": 500,
+		"children-class": "cpu",
+		"transition-left-to-right": true
+		},
+		"modules": [
+		        "temperature",
+		        "cpu",
+			"memory",
+		]
+},
+		
+  
+  "group/laptop": {
+    "orientation": "horizontal",
+    "modules": [
+      "backlight",
+      "battery",
+      ]	
+  },
+
+"group/laptop_drawer": {
+	"orientation": "inherit",
+	"drawer": {
+		"transition-duration": 500,
+		"children-class": "battery",
+		"transition-left-to-right": true
+		},
+		"modules": [
+			"battery",
+			"backlight",
+			"bluetooth",
+			"power-profiles-daemon",
+			"idle_inhibitor",
+		]
+},
+  
+  "group/audio": {
+    "orientation": "horizontal",
+    "modules": [
+      "pulseaudio",
+      "pulseaudio#microphone",
+      ]	
+  },
+
+"group/audio_drawer": {
+	"orientation": "inherit",
+	"drawer": {
+		"transition-duration": 500,
+		"children-class": "pulseaudio",
+		"transition-left-to-right": true
+		},
+		"modules": [
+			"pulseaudio",
+			"pulseaudio#microphone",
+			"cava",
+		]
+  },
+  
+"group/app_drawer": {
+	"orientation": "inherit",
+	"drawer": {
+		"transition-duration": 500,
+		"children-class": "battery",
+		"transition-left-to-right": true
+		},
+		"modules": [
+	                "custom/kitty",
+	                "custom/nautilus",
+	                "custom/notepad",
+	                "custom/spotify",
+	                "custom/g4music",
+	                "custom/brave",
+		]
+},
+  
+  "backlight": {
+    "interval": 2,
+    "align": 0,
+    "rotate": 0,
+    //"format": "{icon} {percent}%",
+    //"format-icons": ["󰃞", "󰃟", "󰃠"],
+    "format": "{icon}",
+    "format-icons": ["","","","","","","","","","","","","","",""],
+    "tooltip-format": "backlight {percent}%",
+    "icon-size": 10,
+    "on-click": "",
+    "on-click-middle": "",
+    "on-click-right": "",
+    "on-update": "",
+    "on-scroll-up": "~/.config/hypr/scripts/Brightness.sh --inc",
+    "on-scroll-down": "~/.config/hypr/scripts/Brightness.sh --dec",
+    "smooth-scrolling-threshold": 1,
+  },
+      
+  "battery": {
+    "interval": 60,
+    "align": 0,
+    "rotate": 0,
+    //"bat": "BAT1",
+    //"adapter": "ACAD",
+    "full-at": 100,
+    "design-capacity": false,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+             },
+    "format": "{icon}",
+    "format-charging": "󰂄",
+    "format-plugged": "󰚥",
+    "format-full": "{icon}",
+    "format-alt": "{icon} {capacity}%",
+    "format-icons": ["󰂎", "󰁼", "󰁿", "󰂀", "󰁹"],
+    "format-time": "{H}h {M}min",
+    "tooltip": true,
+    "tooltip-format": "{timeTo} / {capacity}%",
+  },
+      
+  "bluetooth": {
+    "format": "󰂳",
+    "format-disabled": "󰂳",
+    "format-connected": "󰂳",
+    "tooltip-format": " {device_alias}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
+    "tooltip": true,
+    "on-click": "blueman-manager",
+  },
+  
+  "cava": {
+    //"cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+    "framerate": 30,
+    "autosens": 1,
+    "sensitivity": 100,
+    "bars": 14,
+    "lower_cutoff_freq": 50,
+    "higher_cutoff_freq": 10000,
+    "method": "pulse",
+    "source": "auto",
+    "stereo": true,
+    "reverse": false,
+    "bar_delimiter": 0,
+    "monstercat": false,
+    "waves": false,
+    "noise_reduction": 0.77,
+    "input_delay": 2,
+    "format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+    "actions": {
+        "on-click-right": "mode"
+               }
+  },
+   
+  "clock": {
+    "interval": 1,
+    //"format": " {:%I:%M %p}",
+    "format": " {:%H:%M}",
+    "format-alt": "  {:L%A / %d %b / %Y / %R}",
+    "on-click-right": "gnome-calendar",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "timezone": "Europe/Warsaw",
+    "locale": "pl_PL.utf8",
+    "calendar": {
+      "mode"          : "year",
+      "mode-mon-col"  : 3,
+//    "weeks-pos"     : "left",
+      "on-scroll"     : 1,
+      "format": {
+      "months":     "<span color='#c73e3e'><b>{}</b></span>",
+      "days":       "<span color='#8184b3'><b>{}</b></span>",
+      "weeks":      "<span color='#49467e'><b>W{}</b></span>",
+      "weekdays":   "<span color='#ad5d5d'><b>{}</b></span>",
+      "today":      "<span color='#ffffff'><b><u>{}</u></b></span>"
+                }
+                }
+    },              
+    "actions":  {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+  },
+   
+  "cpu": {
+    "format": "{usage}% 󰍛",  
+    "interval": 10,
+    "format-alt-click": "click",
+    "format-alt": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}",
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "on-click-right": "gkrellm",
+  },
+    
+  "disk": {
+    "interval": 30,
+    //"format": "󰋊",
+    "path": "/",
+    //"format-alt-click": "click",
+    "format": "{percentage_used}% 󰋊",
+    //"tooltip": true,
+    "tooltip-format": "{used} used out of {total} on {path} ({percentage_used}%)",
+  },
+    
+  "hyprland/language": {
+    "format": "Lang: {}",
+    "format-en": "US",
+    "format-tr": "Korea",
+    "keyboard-name": "at-translated-set-2-keyboard",
+    "on-click": "hyprctl switchxkblayout $SET_KB next"
+  },
+    
+  "hyprland/submap": {
+    "format": "<span style=\"italic\">  {}</span>", // Icon: expand-arrows-alt
+    "tooltip": false,
+  },
+    
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 8,
+    "separate-outputs": true,
+    "offscreen-css" : true,
+    "offscreen-css-text": "(inactive)",
+     "rewrite": {
+          "(.*) — Mozilla Firefox": " $1",
+          "(.*) - fish": "> [$1]",
+      "(.*) - zsh": "> [$1]",
+      "(.*) - kitty": "> [$1]",
+    },
+  },
+  
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": " ",
+      "deactivated": " ",
+                    }
+  },
+    
+  "keyboard-state": {
+    //"numlock": true,
+    "capslock": true,
+    "format": {
+      "numlock": "N {icon}",
+    "capslock":"󰪛 {icon}",
+        }, 
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+              },
+  },
+    
+  "memory": {
+    "interval": 10,
+    "format": "{used:0.1f}G 󰾆",
+    "format-alt": "{percentage}% 󰾆",
+    "format-alt-click": "click",
+    "tooltip": true,
+    "tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
+    "on-click-right": "gkrellm",
+  },
+      
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰌘",
+    "format-disconnected": "󰌙", 
+    "tooltip-format": "{ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "format-linked": "󰈁 {ifname} (No IP)",
+    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname} 󰌘",
+    "tooltip-format-disconnected": "󰌙 Disconnected",
+    "max-length": 50,
+    "format-icons": ["󰤯 ","󰤟 ","󰤢 ","󰤥 ","󰤨 "]
+  },
+  
+  "network#speed": {
+    "interval": 1,
+    "format": "{ifname}",
+    "format-wifi": "{icon}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "format-ethernet": "󰌘   {bandwidthUpBytes}  {bandwidthDownBytes}",
+    "format-disconnected": "󰌙", 
+    "tooltip-format": "{ipaddr}",
+    "format-linked": "󰈁 {ifname} (No IP)",
+    "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname} 󰌘",
+    "tooltip-format-disconnected": "󰌙 Disconnected",
+    "max-length": 50,
+    "format-icons": ["󰤯 ","󰤟 ","󰤢 ","󰤥 ","󰤨 "]
+  },
+      
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} 󰂰 {volume}%",
+    "tooltip": true,
+    "tooltip-format": "{icon} {volume}%",
+    "format-muted": "󰖁",
+    "format-icons": {
+        "headphone": "󰕾",
+        "hands-free": "󰕾",
+        "headset": "󰕾",
+        "phone": "",
+        "portable": "",
+        "car": "",
+    "default": ["", "", "󰕾", "󰕾"], 
+    "ignored-sinks": ["Easy Effects Sink"],
+    },
+    "scroll-step": 5.0,
+    "on-click": "~/.config/hypr/scripts/Volume.sh --toggle",
+    "on-click-right": "pavucontrol -t 3",
+    "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
+    "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
+    "smooth-scrolling-threshold": 1,
+  },
+      
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "",
+    "format-source-muted": " ",
+    "on-click": "~/.config/hypr/scripts/Volume.sh --toggle-mic",
+    "on-click-right": "pavucontrol -t 4",
+    "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --mic-inc",
+    "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --mic-dec",
+    "scroll-step": 5,
+  },
+  
+"custom/swaync": {
+    "tooltip":true,     
+    "format": "{icon}",
+    "format-icons": {
+      "notification": " ",
+      "none": " ",
+      "dnd-notification": "󰂛 ",
+      "dnd-none": "󰂛 ",
+      "inhibited-notification": " ",
+      "inhibited-none": " ",
+      "dnd-inhibited-notification": "󰂛 ",
+      "dnd-inhibited-none": "󰂛 "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+},
+    
+    
+  "temperature": {
+    "interval": 1,
+    "tooltip": true,
+    "tooltip-format": "CPU / Ryzen 7",
+    "hwmon-path": ["/sys/class/hwmon/hwmon4/temp1_input", "/sys/class/thermal/thermal_zone1/temp"],
+    //"thermal-zone": 0,
+    "critical-threshold": 100,
+    "format-critical": "{temperatureC}°C {icon}",
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["󰈸"],
+    "on-click": "gkrellm"
+  },
+      
+  "tray": {
+    "icon-size": 20,
+    "spacing": 8,
+  },
+      
+  "wireplumber": {
+    "format": "{icon} {volume} %",
+    "format-muted": " Mute",
+    "on-click": "~/.config/hypr/scripts/Volume.sh --toggle",
+    "on-click-right": "pavucontrol -t 3",
+    "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
+    "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
+    "format-icons": ["", "", "󰕾", ""], 
+  },
+      
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 22,
+    "icon-theme": "Simply-White-Circles",
+    "all-outputs": false,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+          "wofi",
+          "rofi",  
+                   ]
+  },
+      
+  "custom/cycle_wall":{
+    "format":" ",
+    "on-click": "~/.config/hypr/scripts/WallpaperSelect.sh",
+    "on-click-right": "~/.config/hypr/scripts/Wallpaper.sh swww",
+    "on-click-middle": "~/.config/hypr/scripts/WaybarStyles.sh",
+    "tooltip": true,
+    "tooltip-format": "Change wallpaper or style"
+  },
+      
+  "custom/keybinds": {
+    "format":"󰺁 HINT!",
+    "tooltip": false,
+    "on-click": "~/.config/hypr/scripts/KeyHints.sh",
+  },
+    
+  "custom/light_dark": {
+    "format": " ",
+    "on-click": "~/.config/hypr/scripts/DarkLight.sh",
+    "on-click-right": "~/.config/hypr/scripts/WaybarStyles.sh",
+    "on-click-middle": "~/.config/hypr/scripts/Wallpaper.sh swww",
+    "tooltip": false,
+  },
+      
+  "custom/lock": {
+    "format": "",
+    "on-click": "~/.config/hypr/scripts/LockScreen.sh",
+    "tooltip": true,
+    "tooltip-format": "Zablokuj Ekran",
+  },
+
+  "custom/kitty": {
+    "format": "",
+    "on-click": "~/.config/hypr/UserScripts/kitty.sh",
+    "on-click-right": "~/.config/hypr/UserScripts/ghostty.sh",
+    "on-click-middle": "~/.config/hypr/UserScripts/console.sh",
+    "tooltip": true,
+    "tooltip-format": "Kitty",
+  },
+  
+  "custom/nautilus": {
+    "format": "",
+    "on-click": "~/.config/hypr/UserScripts/nautilus.sh",
+    "tooltip": true,
+    "tooltip-format": "Pliki",
+  },
+  
+    "custom/spotify": {
+    "format": "",
+    "on-click": "~/.config/hypr/UserScripts/spotify.sh",
+    "tooltip": true,
+    "tooltip-format": "Spotify",
+  },
+  
+    "custom/g4music": {
+    "format": "󰎌",
+    "on-click": "~/.config/hypr/UserScripts/g4music.sh",
+    "tooltip": true,
+    "tooltip-format": "Muzyka",
+  },
+  
+  "custom/notepad": {
+    "format": "󰎞",
+    "on-click": "~/.config/hypr/UserScripts/gedit.sh",
+    "tooltip": true,
+    "tooltip-format": "Notatnik",
+  },
+  
+  "custom/brave": {
+    "format": "",
+    "on-click": "~/.config/hypr/UserScripts/brave.sh",
+    "tooltip": true,
+    "tooltip-format": "Przeglądarka Internetowa"
+  },
+    
+  "custom/menu": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "pkill rofi || rofi -show drun -modi drun,filebrowser,run,window",
+    "on-click-middle": "~/.config/hypr/UserScripts/WallpaperSelect.sh",
+    "on-click-right": "~/.config/hypr/scripts/WaybarLayout.sh",
+  },
+  
+  "custom/playerctl": {
+    "format": "<span>{}</span>",
+    "return-type": "json",
+    "max-length": 11,
+    "exec": "playerctl --player=spotify,starwberry,musikcube,org.strawberrymusicplayer.strawberry,org.gnome.Decibels,com.github.neithern.g4music,audacious,vlc,%any -a metadata --format '{\"text\": \"{{markup_escape(title)}} ~ {{artist}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click-middle": "playerctl --player=spotify,starwberry,musikcube,org.strawberrymusicplayer.strawberry,org.gnome.Decibels,com.github.neithern.g4music,audacious,vlc,%any play-pause",
+    "on-click": "playerctl --player=spotify,starwberry,musikcube,org.strawberrymusicplayer.strawberry,org.gnome.Decibels,com.github.neithern.g4music,audacious,vlc,%any previous",
+    "on-click-right": "playerctl next",
+    "scroll-step": 5.0,
+    "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
+    "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
+    "smooth-scrolling-threshold": 1,
+  },
+  
+"custom/playerctl2": {
+    "format": "{icon} {}",
+    "max-length": 40,
+    "return-type": "json",
+    "exec": "/home/asteroth/.config/waybar/skrypty/playerctl2.sh",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "format-icons": {
+        "playing": "", // Requires a Nerd Font
+        "paused": ""   // Requires a Nerd Font
+    }
+},
+      
+  "custom/power": {
+    "format": "⏼",
+    "tooltip": false,
+	  "on-click": "~/.config/hypr/scripts/Wlogout.sh",
+    "on-click-right": "~/.config/hypr/scripts/ChangeBlur.sh",
+  },
+  
+  // NOTE:! This is only for Arch and Arch Based Distros  
+  "custom/updater":{
+    "format": " {}",
+    "exec": "checkupdates | wc -l",
+    "exec-if": "[[ $(checkupdates | wc -l) ]]",
+    "interval": 15,
+    "on-click": "kitty -T update paru -Syu || yay -Syu && notify-send 'The system has been updated'",
+  },
+    
+  "custom/weather": {
+    "format": "{}",
+    "format-alt": "{alt}: {}",
+    "on-click": "gapplication launch org.gnome.Weather",
+    "interval": 3600,
+    "return-type": "json",
+    //"exec": "~/.config/hypr/UserScripts/Weather.sh",
+    "exec": "~/.config/hypr/UserScripts/Weather.py",
+    //"exec-if": "ping wttr.in -c1",
+    "tooltip": true,
+    "tooltip-format": "Świebodzice"
+  },
+  
+  "custom/weather2": {
+    "format": "{}° ",
+    "tooltip": true,
+    "on-click": "gapplication launch org.gnome.Weather",
+    "interval": 3600,
+    "exec": "wttrbar --hide-conditions --lang pl --nerd --location Swiebodzice",
+    //"exec-if": "ping wttr.in -c1",
+    "return-type": "json"
+},
+
+  "custom/weather3": {
+    "format": "{} ",
+    "format-alt": "{alt}: {}",
+    "on-click": "gapplication launch org.gnome.Weather",
+    "interval": 3600,
+    "return-type": "json",
+    //"exec": "~/.config/hypr/UserScripts/Weather.sh",
+    "exec": "~/.config/hypr/UserScripts/Weather3.py",
+    //"exec-if": "ping wttr.in -c1",
+    "tooltip": true,
+  },
+  
+  
+  // Separators
+  "custom/separator#dot": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  
+  "custom/separator#dot-line": {
+    "format": "",
+    "interval": "once",
+    "tooltip": false
+  },
+  
+  "custom/separator#line": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  
+    "custom/separator#line2": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  },
+  
+  "custom/separator#blank": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  
+  "custom/separator#blank_2": {
+    "format": "  ",
+    "interval": "once",
+    "tooltip": false
+  },
+  
+  // Modules below are for vertical layout
+  
+  "backlight#vertical": {
+    "interval": 2,
+      "align": 0.35,
+      "rotate": 1,
+      "format": "{icon}",
+      "format-icons": ["󰃞", "󰃟", "󰃠"],
+      "on-click": "",
+      "on-click-middle": "",
+      "on-click-right": "",
+      "on-update": "",
+      "on-scroll-up": "~/.config/hypr/scripts/Brightness.sh --inc",
+      "on-scroll-down": "~/.config/hypr/scripts/Brightness.sh --dec",
+      "smooth-scrolling-threshold": 1,
+    //"tooltip-format": "{percent}%",
+  },
+  
+  "clock#vertical": {
+     "format": "{:\n%H\n%M\n%S\n\n \n%d\n%m\n%y}",
+     "interval": 1,
+     //"format": "{:\n%I\n%M\n%p\n\n \n%d\n%m\n%y}",
+     "tooltip": true,
+     "tooltip-format": "{calendar}",
+     "calendar": {
+       "mode": "year",
+       "mode-mon-col": 3,
+       "format": {
+       "today": "<span color='#0dbc79'>{}</span>",
+       }
+     }
+  },
+  "cpu#vertical": {
+    "format": "󰍛\n{usage}%",  
+    "interval": 1,
+    "on-click-right": "gnome-system-monitor",
+  },
+  
+  "memory#vertical": {
+    "interval": 10,
+    "format": "󰾆\n{percentage}%",
+    "format-alt": "󰾆\n{used:0.1f}G",
+    "format-alt-click": "click",
+    "tooltip": true,
+    "tooltip-format": "{used:0.1f}GB/{total:0.1f}G",
+    "on-click-right": "kitty --title btop sh -c 'btop'",
+  },
+  
+  "pulseaudio#vertical": {
+    "format": "{icon}",
+    "format-bluetooth": "󰂰",
+    "format-muted": "󰖁",
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+    "default": ["", "", "󰕾", ""], 
+    "ignored-sinks": ["Easy Effects Sink"],
+    },
+    "scroll-step": 5.0,
+    "on-click": "~/.config/hypr/scripts/Volume.sh --toggle",
+    "on-click-right": "pavucontrol -t 3",
+    "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
+    "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
+    "smooth-scrolling-threshold": 1,
+  },
+  
+  "pulseaudio#microphone_vertical": {
+    "format": "{format_source}",
+    "format-source": "󰍬",
+    "format-source-muted": "󰍭",
+    "on-click-right": "pavucontrol",
+    "on-click": "~/.config/hypr/scripts/Volume.sh --toggle-mic",
+    "on-scroll-up": "~/.config/hypr/scripts/Volume.sh --mic-inc",
+    "on-scroll-down": "~/.config/hypr/scripts/Volume.sh --mic-dec",
+    "max-volume": 100,
+    "tooltip": true,
+    "tooltip-format": "{icon} {desc} {volume}%",
+  },
+  
+  "power-profiles-daemon": {
+  "format": "{icon} ",
+  "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+  "tooltip": true,
+  "format-icons": {
+    "default": "󱓞",
+    "performance": "󱓞",
+    "balanced": "",
+    "power-saver": "󰌪"
+  }
+},
+  
+  "temperature#vertical": {
+    "interval": 10,
+    "tooltip": true,
+    "hwmon-path": ["/sys/class/hwmon/hwmon1/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+    //"thermal-zone": 0,
+    "critical-threshold": 80,
+    "format-critical": "{icon}\n{temperatureC}°C",
+    "format": " {icon}",
+    "format-icons": ["󰈸"],
+    "on-click-right": "kitty --title nvtop sh -c 'nvtop'"
+  },
+  
+  "custom/power_vertical": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "~/.config/hypr/scripts/RofiPower.sh",
+    "on-click-right": "~/.config/hypr/scripts/ChangeBlur.sh",
+  },
+  
+  	"custom/circle1": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle2": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle4": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle5": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle6": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle7": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle8": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle9": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle0": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/circle11": {
+		"format": "",
+		"tooltip": false
+	},
+	
+	 // Left Arrows
+
+  "custom/left1": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/left2": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/left3": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/left4": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/left5": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/left6": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/left7": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/left8": {
+    "format": "",
+    "tooltip": false
+  },
+
+  // Right Arrows
+
+  "custom/right1": {
+    "format": ">",
+    "tooltip": false
+  },
+  "custom/right2": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/right3": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/right4": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/right5": {
+    "format": "",
+    "tooltip": false
+  },
+
+  // Left Inverse
+
+  "custom/leftin1": {
+    "format": "",
+    "tooltip": false
+  },
+  "custom/leftin2": {
+    "format": "",
+    "tooltip": false
+  },
+
+  // Right Inverse
+
+  "custom/rightin1": {
+    "format": "",
+    "tooltip": false
+  },
+  
+    "custom/rightin2": {
+    "format": "",
+    "tooltip": false
+  },
+  
+    "custom/rightin3": {
+    "format": "",
+    "tooltip": false
+  },
+  
+    "custom/rightin4": {
+    "format": "",
+    "tooltip": false
+  },
+  
+    "custom/rightin5": {
+    "format": "",
+    "tooltip": false
+  },
+  
+    "custom/rightin6": {
+    "format": "",
+    "tooltip": false
+  },
+  
+  
+  }
+  
+  

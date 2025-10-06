@@ -1,0 +1,97 @@
+/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
+/* pywal-wlogout */
+
+/* Importing pywal colors */
+
+@import '../../.config/waybar/wallust/colors-waybar.css';
+
+window {
+    font-family: DepartureMono Nerd Font;
+    font-size: 22pt;
+    color: #cdd6f4; /* text */
+    background-color: rgba(15, 15, 15, 0.8);
+}
+
+button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    background-color: rgba(200, 220, 255, 0);
+    animation: gradient_f 20s ease-in infinite;
+    border-radius: 80px; /* Increased border radius for a more rounded look */
+    margin: 2px;
+    border: 3px solid transparent;
+}
+
+button:focus {
+    background-color: transparent;
+    border: 3px solid #ffffff; 
+    color: #ffffff;
+    background-size: 40%;
+    margin: 2px;
+    border-radius: 80px; 
+    transition: all 0.2s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.1s ease-in-out, background-color 0.1s ease-in-out;
+    box-shadow: 0 0 20px @color7; 
+
+}
+
+button:hover {
+    background-color: @color3;
+    border: 3px solid #ffffff; 
+    color: #1e1e2e;
+    background-size: 80%;
+    margin: 2px;
+    border-radius: 80px; 
+    transition: all 0.4s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.1s ease-in-out, background-color 0.1s ease-in-out;
+    box-shadow: 0 0 20px @color7; 
+    font-weight: bold;
+	
+}
+
+/* Adjust the size of the icon or content inside the button */
+button span {
+    font-size: 1.3em; /* Increase the font size */
+}
+
+
+#lock {
+    background-image: image(url("./icons/lock.png"));
+}
+#lock:hover {
+    background-image: image(url("./icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("./icons/logout.png"));
+}
+#logout:hover {
+    background-image: image(url("./icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("./icons/sleep.png"));
+}
+#suspend:hover {
+    background-image: image(url("./icons/sleep.png"));
+}
+
+#shutdown {
+    background-image: image(url("./icons/power.png"));
+}
+#shutdown:hover {
+    background-image: image(url("./icons/power.png"));
+}
+
+#reboot {
+    background-image: image(url("./icons/restart.png"));
+}
+#reboot:hover {
+    background-image: image(url("./icons/restart.png"));
+}
+
+#hibernate {
+    background-image: image(url("./icons/hibernate.png"));
+}
+#hibernate:hover {
+    background-image: image(url("./icons/hibernate.png"));
+}
