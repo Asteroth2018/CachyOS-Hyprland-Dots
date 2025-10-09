@@ -30,7 +30,7 @@
     "script-fail-notify": true,
     "scripts": {
     "sound-script": {
-      "exec": "bash /home/asteroth/.config/swaync/scripts/Sound.sh",
+      "exec": "bash ~/.config/swaync/scripts/Sound.sh",
       "app-name": "org.gnome.Nautilus"
     }
   },
