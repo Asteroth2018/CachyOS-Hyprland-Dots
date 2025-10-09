@@ -25,7 +25,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliasy
 
 alias db="distrobox"
-alias amfora="/home/asteroth/amfora/./amfora_1.9.2_linux_64-bit"
+alias amfora="~/amfora/./amfora_1.9.2_linux_64-bit"
 alias zyp="sudo zypper"
 alias syp="sypper"
 alias pacin="sudo pacman -S"
@@ -51,27 +51,27 @@ alias cd="z"
 alias shell="echo "$SHELL""
 alias pogoda=" curl -s 'wttr.in/Swiebodzice?m2&lang=pl' "
 alias cp="rsync -aP"
-alias iso="/home/asteroth/moje/Bash/./woeusb-5.2.4.bash --device"
+alias iso="~/moje/Bash/./woeusb-5.2.4.bash --device"
 alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
 alias ram="sudo dmidecode --type 17"
-alias clearram="sudo /home/asteroth/moje/Bash/./clear_ram.sh"
-alias gdriveup="/home/asteroth/moje/Bash/./gdriveupload.sh"
-alias gdrivedo="/home/asteroth/moje/Bash/./gdrivedownload.sh"
+alias clearram="sudo ~/moje/Bash/./clear_ram.sh"
+alias gdriveup="~/moje/Bash/./gdriveupload.sh"
+alias gdrivedo="~/moje/Bash/./gdrivedownload.sh"
 alias gdrivesee="rclone ls google-drive:/Pliki-Linux"
-alias czas='python3 /home/asteroth/moje/Python/gotowe/zegarek10.py'
-alias searchtxt='python3 /home/asteroth/moje/Python/gotowe/wyszukiwarka-textu.py'
-alias searchtxtr='python3 /home/asteroth/moje/Python/gotowe/wyszukiwarka-textu-rangger.py'
-alias ascii='python3 /home/asteroth/moje/Python/gotowe/ascii-art.py'
+alias czas='python3 ~/moje/Python/gotowe/zegarek10.py'
+alias searchtxt='python3 ~/moje/Python/gotowe/wyszukiwarka-textu.py'
+alias searchtxtr='python3 ~/moje/Python/gotowe/wyszukiwarka-textu-rangger.py'
+alias ascii='python3 ~/moje/Python/gotowe/ascii-art.py'
 alias ncdu="ncdu --color dark"
 #ten jest do otwierania obrazków
 alias icat="kitten icat"
 #ten ci wyśle text na telefon z powiadomieniem
 alias notify="curl -d "ukończono-zadanie" 192.168.1.13/raspberry-notyfikacje"
 #ten ci wyszuka pliki z fzf i i ten co wybierzesz otworzy w lvim
-alias fzftext="/home/asteroth/moje/Bash/./fzftext.sh"
+alias fzftext="~/moje/Bash/./fzftext.sh"
 
-#alias p10k-colors="/home/asteroth/moje/Bash/./p10k-colors.sh"
-#alias hide.me="/home/asteroth/moje/Bash/hideme.sh"
+#alias p10k-colors="~/moje/Bash/./p10k-colors.sh"
+#alias hide.me="~/moje/Bash/hideme.sh"
 #alias cmatrix="rs-matrix --katakana --asynchronous --delay 65 --glitch-freq 1.0 --colour red"
 
 
