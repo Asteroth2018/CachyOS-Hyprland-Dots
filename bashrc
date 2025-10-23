@@ -7,7 +7,7 @@ export PATH="$HOME/.npm/node_modules/.bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
-export PATH="$HOME/.spicetifybash:$PATH"
+export PATH="$HOME/.spicetify:$PATH"
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
