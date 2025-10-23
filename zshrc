@@ -6,7 +6,7 @@ export PATH="$HOME/.npm/node_modules/.bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
-export PATH=$PATH:/home/asteroth/.spicetify
+export PATH="$HOME:/.spicetify:$PATH"
 
 # Themesy
 
